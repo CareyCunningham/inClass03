@@ -1,6 +1,6 @@
 jobs:
   job1:
-    name: first job to run
+    - name: first job to run
     runs-on: ubuntu-latest
     steps:
       - name: Step one (optional because of - in YAML)
@@ -8,9 +8,9 @@ jobs:
       - name: Step two
         run: ls -la
   job2:
-    name: Second job to run (concurrent)
+    - name: Second job to run (concurrent)
     runs-on: windows-latest
-    steps:
+    - steps:
       - name: Step one of job 2
         uses: actions/checkout@v4
       - name: Step two of job2
