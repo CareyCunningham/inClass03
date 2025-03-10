@@ -6,7 +6,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Step two (list files)
         run: ls -la
-
   job2:
     runs-on: windows-latest
     steps:
