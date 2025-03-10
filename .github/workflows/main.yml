@@ -1,19 +1,18 @@
 jobs:
   job1:
-    - name: first job to run
     runs-on: ubuntu-latest
     steps:
-      - name: Step one (optional because of - in YAML)
+      - name: Step one (checkout)
         uses: actions/checkout@v4
-      - name: Step two
+      - name: Step two (list files)
         run: ls -la
+
   job2:
-    - name: Second job to run (concurrent)
     runs-on: windows-latest
-    - steps:
-      - name: Step one of job 2
+    steps:
+      - name: Step one of job 2 (checkout)
         uses: actions/checkout@v4
-      - name: Step two of job2
+      - name: Step two of job 2 (print working directory)
         run: pwd
-      - name: Step 3
+      - name: Step three of job 2 (list directory contents)
         run: dir
